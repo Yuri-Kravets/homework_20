@@ -44,7 +44,7 @@ console.log(find([1,2,3,3,3,4,5],item =>item === 3));
 
 
 
-// Task every()
+// Task flat()
 let arr = [[1, 2, 3], [1,[2, 3]], [[[[1, 2, 3, 4]]]]];
 
   function flatFunc (paramArr, arrNew = []) {
