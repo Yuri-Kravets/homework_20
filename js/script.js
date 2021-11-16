@@ -45,16 +45,18 @@ console.log(find([1,2,3,3,3,4,5],item =>item === 3));
 
 
 // Task every()
-let arr = [1,2,3,4,5];
+let arr = [[1, 2, 3], [1,[2, 3]], [[[[1, 2, 3, 4]]]]];
 
-function every(a) {
-
-  for (let i = 0; i > arr.length; i++){
-    if (arr[i] > 0) {
-    return true;
-  } else {
-    return false;
-  }
-  return console.log();
+  function flatFunc (paramArr, arrNew = []) {
+    for (let i = 0; i < paramArr.length; i++) {
+      if (Array.isArray(paramArr[i])) {
+           flatFunc(paramArr[i], arrNew)
+      } else {
+          arrNew.push(paramArr[i]);
+      }
+    }
+    return arrNew;
 }
-every(arr);
+
+console.log(flatFunc(arr));
+     
