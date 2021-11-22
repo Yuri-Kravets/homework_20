@@ -62,6 +62,7 @@ function includes(arr, value) {
 console.log (includes(array,35))
 
 
+<<<<<<< HEAD
 // Решение нагуглил, я не понимаю как пользоваться функциями every и some.
   //как задавать нужные параметры.
 
@@ -108,9 +109,26 @@ function flatFunc (paramArr, arrNew = []) {
           flatFunc(paramArr[i],arrNew);
       } else {
         arrNew.push(paramArr[i]);
+=======
+// Task flat()
+let arr = [[1, 2, 3], [1,[2, 3]], [[[[1, 2, 3, 4]]]]];
+
+  function flatFunc (paramArr, arrNew = []) {
+    for (let i = 0; i < paramArr.length; i++) {
+      if (Array.isArray(paramArr[i])) {
+           flatFunc(paramArr[i], arrNew)
+      } else {
+          arrNew.push(paramArr[i]);
+>>>>>>> a4859a74bb43213df9684715b164e3f9a07c091f
       }
     }
     return arrNew;
 }
+<<<<<<< HEAD
 console.log(flatFunc(arr));
 */
+=======
+
+console.log(flatFunc(arr));
+     
+>>>>>>> a4859a74bb43213df9684715b164e3f9a07c091f
